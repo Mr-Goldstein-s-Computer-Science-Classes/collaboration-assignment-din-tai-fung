@@ -4,7 +4,7 @@ private String name;
 private String assignment;
 private double grade;
 private String assignName;
-    ArrayList<String> students = new ArrayList<String>();
+    ArrayList<String> assignments =  new ArrayList<String>();;
 
     public String getName() {
         return name;
@@ -41,23 +41,35 @@ private String assignName;
     public Student(String name)
     {
         this.name = name;
+
     }
 
     public void addAssignment(String assignName)
     {
         assignName = "ungraded";
-        students.add(assignName);
+        assignments.add(assignName);
 
     }
 
     public void gradeAssignment(String assignment, double grade)
     {
-
+            this.grade = grade;
+             assignment = "graded";
     }
-
     public double getAssignmentGrade(String assignment)
     {
+        this.assignment = assignment;
+return 22;
+    }
 
+    public double getOverallGrade()
+    {
+        for(assigments)
+    }
+
+    public String toString()
+    {
+        return "k";
     }
 
 }
