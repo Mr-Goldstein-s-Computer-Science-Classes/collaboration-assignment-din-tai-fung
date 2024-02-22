@@ -56,12 +56,26 @@ private String assignName;
 
     public void gradeAssignment(String assignment, double grade)
     {
-       if(assignments.getIndexOf())
+       if(assignments.indexOf(assignment)==-1)
+       {
+           System.out.println("Assignment not found");
+       }
+       else
+       {
+           grades.set(assignments.indexOf(assignment), grade);
+       }
     }
     public double getAssignmentGrade(String assignment)
     {
-        this.assignment = assignment;
-return 22;
+        if(assignments.indexOf(assignment)==-1)
+        {
+            System.out.println("Assignment not found");
+            return -1;
+        }
+        else
+        {
+            return grades.get(assignments.indexOf(assignment));
+        }
     }
 
     public double getOverallGrade()
