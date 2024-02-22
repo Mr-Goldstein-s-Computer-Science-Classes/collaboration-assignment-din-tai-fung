@@ -7,6 +7,7 @@ public class Gradebook
     public Gradebook()
     {
         narnia = new ArrayList<Student>();
+        fire = new ArrayList<String>();
     }
     public void createStudent(Student student)
     {
