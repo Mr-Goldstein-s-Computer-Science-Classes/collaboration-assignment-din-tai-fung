@@ -71,6 +71,12 @@ public class Main {
 
         System.out.println(grades.getMinOverall());
 
-        
+        System.out.println(grades);
+        System.out.println(tyler);
+        System.out.println(james);
+        System.out.println(ethan);
+        System.out.println(scotty);
+        System.out.println(david);
+        System.out.println(patrick);
     }
 }
