@@ -9,12 +9,14 @@ public class Gradebook
     public void createStudent(String name)
     {
         Student student = new Student(name);
-        ArrayList<>
+        narnia.add(student);
     }
     public void addAssignment(String assignment)
     {
-
-        assignments.add(assignment);
+        for(Student kid:narnia)
+        {
+            kid.addAssignment(assignment);
+        }
     }
     public void gradeAssignment(String assignment, String studentName, double grade)
     {
