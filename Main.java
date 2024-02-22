@@ -65,14 +65,14 @@ public class Main {
         System.out.println(grades.getMinimumGrade("Stacks and queues programs"));
         System.out.println(grades.getMinimumGrade("Stacks And Queues Station Activity"));
 
-        System.out.println(grades.getMinimumGrade("Github Exploration"));
-        System.out.println(grades.getMinimumGrade("Stacks and queues quiz"));
-        System.out.println(grades.getMinimumGrade("Stacks and queues programs"));
-        System.out.println(grades.getMinimumGrade("Stacks And Queues Station Activity"));
+        System.out.println(grades.getAverageOverall());
+        System.out.println(grades.getAverageOverall());
+        System.out.println(grades.getAverageOverall());
+        System.out.println(grades.getAverageOverall());
 
-        System.out.println(grades.getMinimumGrade("Github Exploration"));
-        System.out.println(grades.getMinimumGrade("Stacks and queues quiz"));
-        System.out.println(grades.getMinimumGrade("Stacks and queues programs"));
-        System.out.println(grades.getMinimumGrade("Stacks And Queues Station Activity"));
+        System.out.println(grades.getMaxOverall());
+        System.out.println(grades.getMaxOverall());
+        System.out.println(grades.getMaxOverall());
+        System.out.println(grades.getMaxOverall());
     }
 }
