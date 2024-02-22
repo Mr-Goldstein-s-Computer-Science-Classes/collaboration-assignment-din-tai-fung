@@ -4,9 +4,12 @@ private String name;
 private String assignment;
 private double grade;
 private String assignName;
-    ArrayList<String> assignments =  new ArrayList<String>();;
+    ArrayList<String> assignments;
+    ArrayList<Double> grades;
 
     public String getName() {
+        this.assignments =   new ArrayList<String>();;
+        this.grades =  new ArrayList<Double>();
         return name;
     }
 
@@ -46,15 +49,14 @@ private String assignName;
 
     public void addAssignment(String assignName)
     {
-        assignName = "ungraded";
         assignments.add(assignName);
+        grades.add(null);
 
     }
 
     public void gradeAssignment(String assignment, double grade)
     {
-            this.grade = grade;
-             assignment = "graded";
+       if(assignments.getIndexOf())
     }
     public double getAssignmentGrade(String assignment)
     {
