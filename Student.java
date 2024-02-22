@@ -4,12 +4,11 @@ private String name;
 private String assignment;
 private double grade;
 
-    ArrayList<String> assignments;
-    ArrayList<Double> grades;
+    ArrayList<String> assignments = new ArrayList<String>();
+    ArrayList<Double> grades = new ArrayList<Double>();
 
     public String getName() {
-        this.assignments =   new ArrayList<String>();;
-        this.grades =  new ArrayList<Double>();
+
         return name;
     }
 
@@ -96,4 +95,4 @@ private double grade;
         return "Student name: " + name + "/nStudents average: " + getOverallGrade();
     }
 
-} 
+}
