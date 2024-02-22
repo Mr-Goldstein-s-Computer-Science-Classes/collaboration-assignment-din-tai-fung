@@ -66,13 +66,11 @@ public class Main {
         System.out.println(grades.getMinimumGrade("Stacks And Queues Station Activity"));
 
         System.out.println(grades.getAverageOverall());
-        System.out.println(grades.getAverageOverall());
-        System.out.println(grades.getAverageOverall());
-        System.out.println(grades.getAverageOverall());
 
         System.out.println(grades.getMaxOverall());
-        System.out.println(grades.getMaxOverall());
-        System.out.println(grades.getMaxOverall());
-        System.out.println(grades.getMaxOverall());
+
+        System.out.println(grades.getMinOverall());
+
+        
     }
 }
