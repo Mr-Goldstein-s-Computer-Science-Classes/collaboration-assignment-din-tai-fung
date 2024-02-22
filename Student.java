@@ -3,7 +3,7 @@ public class Student {
 private String name;
 private String assignment;
 private double grade;
-private String assignName;
+
     ArrayList<String> assignments;
     ArrayList<Double> grades;
 
@@ -33,13 +33,6 @@ private String assignName;
         this.grade = grade;
     }
 
-    public String getAssignName() {
-        return assignName;
-    }
-
-    public void setAssignName(String assignName) {
-        this.assignName = assignName;
-    }
 
     public Student(String name)
     {
@@ -56,7 +49,7 @@ private String assignName;
 
     public void gradeAssignment(String assignment, double grade)
     {
-       if(assignments.indexOf(assignment)==-1)
+       if(!(assignments.contains(assignment)))
        {
            System.out.println("Assignment not found");
        }
@@ -67,7 +60,7 @@ private String assignName;
     }
     public double getAssignmentGrade(String assignment)
     {
-        if(assignments.indexOf(assignment)==-1)
+        if(!(assignments.contains(assignment)))
         {
             System.out.println("Assignment not found");
             return -1;
@@ -80,12 +73,27 @@ private String assignName;
 
     public double getOverallGrade()
     {
-        for(assigments)
+        double total = 0;
+        int average = 0;
+        if(grades.isEmpty()&&assignments.isEmpty()) {
+            System.out.println("No grades");
+            return -1;
+        }
+        for(double grade: grades)
+        {
+            if(!(grades.equals(null)))
+            {
+               total += total + grade;
+               average++;
+            }
+
+        }
+        return total/average;
     }
 
     public String toString()
     {
-        return "k";
+        return "Student name: " + name + "/nStudents average: " + getOverallGrade();
     }
 
 }
