@@ -80,7 +80,7 @@ private double grade;
         }
         for(double grade: grades)
         {
-            if(!(grades.equals(null)))
+            if((grades.equals(null)))
             {
                total += total + grade;
                average++;
