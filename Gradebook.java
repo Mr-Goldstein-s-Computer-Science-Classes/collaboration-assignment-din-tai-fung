@@ -20,10 +20,20 @@ public class Gradebook
     }
     public void gradeAssignment(String assignment, String studentName, double grade)
     {
-        
+        for(Student kid:narnia)
+        {
+            
+        }
     }
     public double getAverageGrade(String assignment)
     {
-
+        double average = 0;
+        int headcount = 0;
+        for(Student kid:narnia)
+        {
+            headcount++;
+            average+= kid.getAssignmentGrade(assignment);
+        }
+        return (average/headcount);
     }
 }
