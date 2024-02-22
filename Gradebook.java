@@ -22,7 +22,10 @@ public class Gradebook
     {
         for(Student kid:narnia)
         {
-            
+            if(kid.getName().equals(studentName))
+            {
+                kid.setGrade();
+            }
         }
     }
     public double getAverageGrade(String assignment)
@@ -35,5 +38,29 @@ public class Gradebook
             average+= kid.getAssignmentGrade(assignment);
         }
         return (average/headcount);
+    }
+    public double getMaximumGrade(String assignment)
+    {
+        double maxgrade = 0;
+        for(Student kid:narnia)
+        {
+            if(kid.getAssignmentGrade(assignment)>maxgrade)
+            {
+                maxgrade = kid.getGrade();
+            }
+        }
+        return maxgrade;
+    }
+    public double getMinimumGrade(String assignment)
+    {
+        double mingrade = 100;
+        for(Student kid:narnia)
+        {
+            if(kid.getAssignmentGrade(assignment)<mingrade)
+            {
+                mingrade = kid.getGrade();
+            }
+        }
+        return mingrade;
     }
 }
