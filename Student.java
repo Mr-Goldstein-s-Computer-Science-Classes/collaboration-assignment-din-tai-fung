@@ -96,4 +96,4 @@ private double grade;
         return "Student name: " + name + "/nStudents average: " + getOverallGrade();
     }
 
-}
+} 
