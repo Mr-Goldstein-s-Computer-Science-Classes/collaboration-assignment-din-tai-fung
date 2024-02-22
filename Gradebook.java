@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Gradebook
 {
+    private ArrayList<String> fire;
     private ArrayList<Student> narnia;
     public Gradebook()
     {
@@ -13,10 +14,12 @@ public class Gradebook
     }
     public void addAssignment(String assignment)
     {
+        fire.add(assignment);
         for(Student kid:narnia)
         {
             kid.addAssignment(assignment);
         }
+
     }
     public void gradeAssignment(String assignment, String studentName, double grade)
     {
@@ -100,10 +103,31 @@ public class Gradebook
     }
     public Student getStudent(String studentName)
     {
-
+        for(Student kid:narnia)
+        {
+            if(kid.getName().equals(studentName))
+            {
+                return kid;
+            }
+        }
+        return null;
     }
     public double getStudentsGrade(String student)
     {
-        return
+        return getStudent(student).getOverallGrade();
+    }
+    public String toString()
+    {
+        StringBuilder kids = new StringBuilder();
+        StringBuilder assignments = new StringBuilder();
+        for(Student kid:narnia)
+        {
+            kids.append(kid.getName());
+        }
+        for(String hw:fire)
+        {
+            assignments.append(hw);
+        }
+        return "Students: " + kids + "Assignments: " + assignments;
     }
 }
