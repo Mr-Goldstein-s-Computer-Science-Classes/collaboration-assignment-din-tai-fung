@@ -2,9 +2,10 @@ import java.util.ArrayList;
 
 public class Gradebook
 {
-    private ArrayList<Student> narnia = new ArrayList<Student>();
+    private ArrayList<Student> narnia;
     public Gradebook()
     {
+        narnia = new ArrayList<Student>();
     }
     public void createStudent(String name)
     {
@@ -24,7 +25,7 @@ public class Gradebook
         {
             if(kid.getName().equals(studentName))
             {
-                kid.setGrade();
+                kid.gradeAssignment(assignment,grade);
             }
         }
     }
@@ -62,5 +63,48 @@ public class Gradebook
             }
         }
         return mingrade;
+    }
+    public double getAverageOverall()
+    {
+        double average = 0;
+        int headcount = 0;
+        for(Student kid:narnia)
+        {
+            headcount++;
+            average += kid.getOverallGrade();
+        }
+        return (average/headcount);
+    }
+    public double getMaxOverall()
+    {
+        double maxgrade = 0;
+        for(Student kid:narnia)
+        {
+            if(kid.getOverallGrade()>maxgrade)
+            {
+                maxgrade = kid.getOverallGrade();
+            }
+        }
+        return maxgrade;
+    }
+    public double getMinOverall()
+    {
+        double mingrade = 100;
+        for(Student kid:narnia)
+        {
+            if(kid.getOverallGrade()<mingrade)
+            {
+                mingrade = kid.getOverallGrade();
+            }
+        }
+        return mingrade;
+    }
+    public Student getStudent(String studentName)
+    {
+
+    }
+    public double getStudentsGrade(String student)
+    {
+        return
     }
 }
