@@ -7,9 +7,8 @@ public class Gradebook
     {
         narnia = new ArrayList<Student>();
     }
-    public void createStudent(String name)
+    public void createStudent(Student student)
     {
-        Student student = new Student(name);
         narnia.add(student);
     }
     public void addAssignment(String assignment)
